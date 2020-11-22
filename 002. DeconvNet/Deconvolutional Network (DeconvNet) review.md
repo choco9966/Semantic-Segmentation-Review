@@ -11,13 +11,13 @@
 - 기존의 FCN은 아래의 한계점을 보유하고 있음 
   1. 네트워크는 기존에 정의된 고정된 Receptive field를 가짐. 그렇기에 object의 크기가 receptive field 대비 크거나 작은 경우에 대해서 잘 못맞추는 경향을 보임. 즉, object가 큰 경우에 대해서는 object의 부분적인 정보들만을 가지고 분류하게 되는 문제점이 발생 (예: 버스를 분류할때, 버스 전체를 보는 것이 아니라 앞면, 유리 등 부분적인 특징을 가지고 분류하게 됨)
 
-     ![figure1](C:\Users\user\Desktop\공부자료\Semantic Segmentation\002. DeconvNet, SegNet\figure1.PNG)
+     ![figure1](https://github.com/choco9966/Semantic-Segmentation-Review/blob/main/002.%20DeconvNet/figure/figure1.PNG?raw=true)
 
   2. 작은 object에 대해서는 일관성없게 분류하는 문제점을 가지고 있음. 종종 무시하거나 배경으로 예측
 
      - 위의 한계점은 사실 Skip Architecture으로 극복하려고 했던 점들이지만, 충분한 해결책이 아니고 details 과 semantics 측면에서 trade - off를 가짐 
 
-       ![figure2](C:\Users\user\Desktop\공부자료\Semantic Segmentation\002. DeconvNet, SegNet\figure2.PNG)
+       ![figure2](https://github.com/choco9966/Semantic-Segmentation-Review/blob/main/002.%20DeconvNet/figure/figure2.PNG?raw=true)
 
   3. object의 detail한 구조를 잃어버리거나 포괄적인 모습으로 대체함
 
@@ -34,7 +34,7 @@
 
 ### Architecture 
 
-![figure3](C:\Users\user\Desktop\공부자료\Semantic Segmentation\002. DeconvNet, SegNet\figure3.PNG)
+![figure3](https://github.com/choco9966/Semantic-Segmentation-Review/blob/main/002.%20DeconvNet/figure/figure3.PNG?raw=true)
 
 - Convolution : input image의 feature를 추출해서 multidimensional feature representation으로 변환함 
   - 위의 구성은 VGG 16-layer net에서 마지막 classification layer를 제거한 것이고, 결국 Convolution networks는 13개의 convolution layers으로 구성되어있고 ReLU 와 Pooling이 convolutions 사이에 수행됨. 마지막으로 2개의 fully connnect layers (1x1 convolution)으로 class-specific projection을 수행함 
@@ -46,7 +46,7 @@
 - Convolution에서 Pooling은 대표값을 추출해서 noisy activation을 걸러주는 역할을 하지만, spatial information을 잃어버리는 문제점을 가지고 있음. 이러한 문제를 해결하기 위해서, 아래의 그림과 같은 Pooling 시의 활성화된 위치를 기억하고 해당 값을 복원하는 방법을 사용 
 - 이러한 전략은 input object의 구조를 기억하는데 매우 유용함 
 
-![figure4](C:\Users\user\Desktop\공부자료\Semantic Segmentation\002. DeconvNet, SegNet\figure4.PNG)
+![figure4](https://github.com/choco9966/Semantic-Segmentation-Review/blob/main/002.%20DeconvNet/figure/figure4.PNG?raw=true)
 
 - PyTorch에서는 `nn.MaxPool2d(2, stride=2, ceil_mode=True, return_indices=True)` 명령어를 통해서 위치를 추출하고, `unpool1 = nn.MaxUnpool2d(2, stride=2), unpool1(h, pool1_indices)` unpooling시에 해당 인덱스를 넣어줌으로서 구현가능함 
 
@@ -57,14 +57,14 @@
 
 ### Analysis of Deconvolution Network 
 
-![figure5](C:\Users\user\Desktop\공부자료\Semantic Segmentation\002. DeconvNet, SegNet\figure5.PNG)
+![figure5](https://github.com/choco9966/Semantic-Segmentation-Review/blob/main/002.%20DeconvNet/figure/figure5.PNG?raw=true)
 
 
 - Deconvolution Network의 Deconvolution과 Unpooling에 의해서 활성화된 activation map을 보면 위와 같음  
 
 - (b), (d), (f), (h), (j)와 같은 Deconvolution의 결과는 dense하고 (c), (e), (g), (i)와 같이 Max unpooling의 결과는 sparse함. 또한, lower layer은 전반적인 특징 (location, shape, region)을 잡는 반면 higher layer는 복잡한 패턴을 잡음 
 
-  ![figure6](C:\Users\user\Desktop\공부자료\Semantic Segmentation\002. DeconvNet, SegNet\figure6.PNG)
+  ![figure6](https://github.com/choco9966/Semantic-Segmentation-Review/blob/main/002.%20DeconvNet/figure/figure6.PNG?raw=true)
 
 - 결국, 위의 그림과 같이 FCN에 비해 디테일한 모습이 많이 살아나는 장점을 보임 
 
@@ -111,11 +111,11 @@
 
 - Optimization은 SGD를 이용하고, learning rate, momentum, weight decay는 각각 0.01, 0.9, 0.0005으로 설정. ILSVRC 데이터셋으로 pre-trained된 모델을 사용했으며 deconvolution networks는 zero-mean Gaussians으로 initialize 함. 또한, drop out을 제거하고 batch normalization을 활용  
 
-  ![figure7](C:\Users\user\Desktop\공부자료\Semantic Segmentation\002. DeconvNet, SegNet\figure7.PNG)
+  ![figure7](https://github.com/choco9966/Semantic-Segmentation-Review/blob/main/002.%20DeconvNet/figure/figure7.PNG?raw=true)
 
-  ![figure9](C:\Users\user\Desktop\공부자료\Semantic Segmentation\002. DeconvNet, SegNet\figure9.PNG)
+  ![figure9](https://github.com/choco9966/Semantic-Segmentation-Review/blob/main/002.%20DeconvNet/figure/figure9.PNG?raw=true)
 
-- 또한, proposals의 수를 늘릴 수록 결과가 좋아지는 것을 볼 수 있음 ![figure8](C:\Users\user\Desktop\공부자료\Semantic Segmentation\002. DeconvNet, SegNet\figure8.PNG)
+- 또한, proposals의 수를 늘릴 수록 결과가 좋아지는 것을 볼 수 있음 ![figure8](https://github.com/choco9966/Semantic-Segmentation-Review/blob/main/002.%20DeconvNet/figure/figure8.PNG?raw=true)
 
 ## Discussion 
 
