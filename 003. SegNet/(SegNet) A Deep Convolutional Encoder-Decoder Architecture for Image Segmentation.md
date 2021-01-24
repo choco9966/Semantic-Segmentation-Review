@@ -30,6 +30,8 @@
 
 ## 3\. Architecture
 
+
+
 ![image-20210125005146494](https://drive.google.com/uc?export=view&id=1sYQHFDQijeNFo9CCcHmAe4EDq1uzIphK)
 
 1.  VGG16의 13개 층을 Encoder로 사용하고 뒤집은 부분을 Decoder로 사용
@@ -99,6 +101,8 @@
     -   Natural frequency balancing
 2.  Bilinear-Interpolation without any learning performs의 경우
 
+
+
 ![image-20210125011429289](https://drive.google.com/uc?export=view&id=1YfJ7ZqxF8HWWZSMfsx382YGJoE-_dgva)
 
 3.  SegNet-Basic vs FCN-Basic
@@ -111,6 +115,8 @@
     -   Faster Inference time (Deconvolution layer가 적음)
 
 4.  Others
+
+
 
 ![image-20210125011842347](https://drive.google.com/uc?export=view&id=1zqNVWXRclKZhrDxHgiPjLMQ1fW7pykfF)
 
