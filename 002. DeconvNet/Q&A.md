@@ -36,6 +36,18 @@ layers {  bottom: "fc7"  top: "fc7"  name: "relu7"  type: RELU}
 
 ### 3. DeconvNet에서 어떠한 방식으로 Region-Proposals를 추출한 것인가요? 
 
+논문에서 자세히는 아니지만 [Edge Box](https://pdollar.github.io/files/papers/ZitnickDollarECCV14edgeBoxes.pdf)이라는 논문의 방식을 사용했다라고 합니다. [김동화님의 Edge Boxes (엣지 박스)](https://donghwa-kim.github.io/EdgeBoxes.html)에 해당 부분에 대한 설명이 자세히 나와있어서 링크 첨부드립니다. 링크의 내용을 제가 이해한대로 설명드리겠습니다. Object의 객체를 추출하는 방법으로 가장 유명한 방식은 Sliding Window 방식이었습니다. 아래의 초록색 Box가 이미지 전체를 돌아다니면서 객체를 찾는 방식입니다. 
+
+![이미지 출처 : https://www.pyimagesearch.com/2015/03/23/sliding-windows-for-object-detection-with-python-and-opencv/](https://drive.google.com/uc?export=view&id=1AHPB48uEawegDQeaG2ceVosKKZQ3JZAV)
+
+하지만 이러한 방식은 전체 이미지를 모두 살펴봐야하기에 비효율적입니다. 그래서 논문에서는 [Structured Edge detector](https://arxiv.org/pdf/1406.5549.pdf)의 방식을 이용합니다. 이 방법은 색, 크기, 방향을 이용해서 만든 피쳐들과 [Pairwise difference features](https://www.microsoft.com/en-us/research/wp-content/uploads/2013/06/LimCVPR13SketchTokens.pdf) 을 이용한 피쳐들을 가지고 유사한 Edge를 찾게됩니다. 이때 유사한 Edge를 Decision Tree 형태로 찾게되고  
+
+![img](https://i.imgur.com/aet0YJw.png)
+
+
+
+
+
 ![](https://drive.google.com/uc?export=view&id=1nxpPorNlv85wSNBbdSS4w9Icdh9ozSKC)
 
 논문에서 자세히는 아니지만 [Edge Box](https://pdollar.github.io/files/papers/ZitnickDollarECCV14edgeBoxes.pdf)이라는 논문의 방식을 사용했다라고 합니다. 해당 논문에서는 슬라이딩 윈도우 방식과는 다르게 Edge를 이용해서 바운딩 박스 후보를 생성하고 해당 영역 내에서만 추가 분류 작업을 진행하는 방식입니다. 이러한 후보의 생성의 방식은 아래와 같습니다. 
