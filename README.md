@@ -4,12 +4,14 @@
 - Fully Convolutional Networks for semantic Segmentation [[paper](https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Long_Fully_Convolutional_Networks_2015_CVPR_paper.pdf) / [reivew](https://github.com/choco9966/Semantic-Segmentation-Review/tree/main/001.%20Fully%20Convolutional%20Network)]
 - Learning Deconvolution Network for Semantic Segmentation [[paper](https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Noh_Learning_Deconvolution_Network_ICCV_2015_paper.pdf) / [review](https://github.com/choco9966/Semantic-Segmentation-Review/tree/main/002.%20DeconvNet)]
 - SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation [[paper](https://arxiv.org/pdf/1511.00561.pdf) / [review](https://github.com/choco9966/Semantic-Segmentation-Review/tree/main/003.%20SegNet)]
+- RedNet: Residual Encoder-Decoder Network for indoor RGB-D Semantic Segmentation [[paper](https://arxiv.org/abs/1806.01054) / review]
 
 ## U-Net 형식의 Semantic Segmentation 
 
 - U-Net: Convolutional Networks for Biomedical Image Segmentation [[paper](https://arxiv.org/abs/1505.04597) / review]
 - V-Net: Fully Convolutional Neural Networks for Volumetric Medical Image Segmentation [[paper](https://arxiv.org/abs/1606.04797) / review]
 - UNet++: A Nested U-Net Architecture for Medical Image Segmentation [[paper](https://arxiv.org/abs/1807.10165) / review]
+- The One Hundred Layers Tiramisu: Fully Convolutional DenseNets for Semantic Segmentation [[paper](https://arxiv.org/abs/1611.09326) / review]
 
 ## DeepLab 형식의 이용한 Semantic Segmentation
 
@@ -24,6 +26,4 @@
 - Pyramid Scene Parsing Network [[paper](https://arxiv.org/abs/1612.01105) / review]
 - Deformable Convolutional Networks [[paper](https://arxiv.org/abs/1703.06211) / review]
 - Large Kernel Matters - Improve Semantic Segmentation by Global Convolutional Network [[paper](https://arxiv.org/abs/1703.02719) / review]
-
-
 
