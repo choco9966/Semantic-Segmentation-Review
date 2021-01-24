@@ -1,2 +1,29 @@
-# Semantic-Segmentation-Review
-Semantic Segmentation Paper를 review하고 해당 코드를 구현하는 repository 입니다. 
+# Semantic Segmentation Review
+## Encoder-Decoder 형식의 Semantic Segmentation 
+
+- Fully Convolutional Networks for semantic Segmentation [[paper](https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Long_Fully_Convolutional_Networks_2015_CVPR_paper.pdf) / [reivew](https://github.com/choco9966/Semantic-Segmentation-Review/tree/main/001.%20Fully%20Convolutional%20Network)]
+- Learning Deconvolution Network for Semantic Segmentation [[paper](https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Noh_Learning_Deconvolution_Network_ICCV_2015_paper.pdf) / [review](https://github.com/choco9966/Semantic-Segmentation-Review/tree/main/002.%20DeconvNet)]
+- SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation [[paper](https://arxiv.org/pdf/1511.00561.pdf) / [review](https://github.com/choco9966/Semantic-Segmentation-Review/tree/main/003.%20SegNet)]
+
+## U-Net 형식의 Semantic Segmentation 
+
+- U-Net: Convolutional Networks for Biomedical Image Segmentation [[paper](https://arxiv.org/abs/1505.04597) / review]
+- V-Net: Fully Convolutional Neural Networks for Volumetric Medical Image Segmentation [[paper](https://arxiv.org/abs/1606.04797) / review]
+- UNet++: A Nested U-Net Architecture for Medical Image Segmentation [[paper](https://arxiv.org/abs/1807.10165) / review]
+
+## DeepLab 형식의 이용한 Semantic Segmentation
+
+- Multi-Scale Context Aggregation by Dilated Convolutions [[paper](https://arxiv.org/abs/1511.07122) / review]
+- DeepLab V1: Semantic Image Segmentation with Deep Convolutional Nets and Fully Connected CRFs [[paper](https://arxiv.org/pdf/1412.7062.pdf) / review]
+- DeepLab V2: Semantic Image Segmentation with Deep Convolutional Nets, Atrous Convolution, and Fully Connected CRFs [[paper](https://arxiv.org/abs/1606.00915) / review]
+- DeepLab V3: Rethinking Atrous Convolution for Semantic Image Segmentation [[paper](https://arxiv.org/abs/1706.05587) / review]
+- DeepLab V3+: Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation [[paper](https://arxiv.org/abs/1802.02611) / review]
+
+## Receptive Field의 한계를 극복하려고 시도한 Semantic Segmentation 
+
+- Pyramid Scene Parsing Network [[paper](https://arxiv.org/abs/1612.01105) / review]
+- Deformable Convolutional Networks [[paper](https://arxiv.org/abs/1703.06211) / review]
+- Large Kernel Matters - Improve Semantic Segmentation by Global Convolutional Network [[paper](https://arxiv.org/abs/1703.02719) / review]
+
+
+
