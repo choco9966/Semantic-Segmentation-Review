@@ -183,16 +183,21 @@
     
 6.  SegNet은 FCN, DeepLab v1 보다는 느리지만 DeconvNet 보다는 빠름
     
+    
+    
     ![image-20210125012924245](https://drive.google.com/uc?export=view&id=1D-8aYzvjxIQjUa8KcnjlNHWdatiw2D8A)
     
     -   FCN, DeepLabv1에 비해 SegNet은 Decoder Architecture가 있어서 느릴 수밖에 없음
     -   DeconvNet에서 FC Layer를 제거한 구조여서 DeconvNet 보다는 속도가 빠름
-7.  SegNet은 Traning, Inference memory가 작은 편이고 Model Size 또한 FCN, DeconvNet에 비해 작음
     
-8.  Object의 크기가 큰 경우에 대해서는 잘 맞추는 모습을 보이지만, 반대의 경우에 대해서는 성능이 떨어지는 모습을 보임
-    
-    ![image-20210125012944893](https://drive.google.com/uc?export=view&id=192p_jZzTsu_q__Y_nUtEWxSxwuM4_0dw)
-    
+7. SegNet은 Traning, Inference memory가 작은 편이고 Model Size 또한 FCN, DeconvNet에 비해 작음
+
+8. Object의 크기가 큰 경우에 대해서는 잘 맞추는 모습을 보이지만, 반대의 경우에 대해서는 성능이 떨어지는 모습을 보임
+
+   
+
+   ![image-20210125012944893](https://drive.google.com/uc?export=view&id=192p_jZzTsu_q__Y_nUtEWxSxwuM4_0dw)
+
 
 ### 6.1 Advantages
 
