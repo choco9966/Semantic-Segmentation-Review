@@ -155,6 +155,8 @@
 -   SegNet의 경우 G와 BF가 DeepLab-LargeFOV 보다 높은 경향을 보이지만 C와 mIoU는 높은 경향을 보이고 CamVid 데이터셋에 비해 성능이 많이 감소함
     -   첫번째 원인은 Class의 수가 증가했고, small class가 이미지에 많이 등장하는 경향이 있음
     -   두번째 원인은 VGG를 사용하는 Deep한 Architecture때문에 발생 (파라미터가 많아서 수렴 x, 정보손실이 큼)
+    
+    
 
 ![image-20210125012717342](https://drive.google.com/uc?export=view&id=1EPpz3_0ITxssksasDhJy3nov5euQjx4u)
 
@@ -223,6 +225,8 @@
         
         -   Input / Output data가 Time Correlated됨
         
+        
+        
         ![image-20210125014232260](https://drive.google.com/uc?export=view&id=13cObpRnnos4YyEDJAuSQBhNwIkI6691k)
         
         -   Dataset의 수가 작고 이상한 라벨들이 존재
@@ -244,6 +248,8 @@
 7.  [https://medium.com/@sunnerli/simple-introduction-about-hourglass-like-model-11ee7c30138](https://medium.com/@sunnerli/simple-introduction-about-hourglass-like-model-11ee7c30138)
 
 ### 7.2 기존의 네트워크와의 비교
+
+
 
 ![image-20210125013713262](https://drive.google.com/uc?export=view&id=1Rjm8f0XOYS05KcRIioAp0kTMRzulITi3)
 
