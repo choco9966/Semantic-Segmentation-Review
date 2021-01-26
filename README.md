@@ -10,8 +10,7 @@
 
 - U-Net: Convolutional Networks for Biomedical Image Segmentation [[paper](https://arxiv.org/abs/1505.04597) / review]
 - V-Net: Fully Convolutional Neural Networks for Volumetric Medical Image Segmentation [[paper](https://arxiv.org/abs/1606.04797) / review]
-- UNet++: Redesigning Skip Connections to Exploit Multiscale Features in Image Segmentation [[paper](https://arxiv.org/pdf/1912.05074) / review]
-- UNet++: A Nested U-Net Architecture for Medical Image Segmentation [[paper](https://arxiv.org/abs/1807.10165) / review]
+- UNet++: Redesigning Skip Connections to Exploit Multiscale Features in Image Segmentation [[paper1](https://arxiv.org/pdf/1912.05074), [paper2](https://arxiv.org/abs/1807.10165) / review]
 - Attention U-Net: Learning Where to Look for the Pancreas [[paper](https://arxiv.org/abs/1804.03999) / review]
 - The One Hundred Layers Tiramisu: Fully Convolutional DenseNets for Semantic Segmentation [[paper](https://arxiv.org/abs/1611.09326) / review]
 - Eff-UNet: A Novel Architecture for Semantic Segmentation in Unstructured Environment [[paper](https://openaccess.thecvf.com/content_CVPRW_2020/papers/w22/Baheti_Eff-UNet_A_Novel_Architecture_for_Semantic_Segmentation_in_Unstructured_Environment_CVPRW_2020_paper.pdf) / review]
