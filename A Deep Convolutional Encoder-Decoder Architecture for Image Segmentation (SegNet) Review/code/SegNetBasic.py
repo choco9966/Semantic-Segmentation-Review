@@ -6,7 +6,7 @@ class SegNetBasic(nn.Module):
         def CBR(in_channels, out_channels, kernel_size=3, stride=1, padding=1):
             layers = []
             layers += [nn.Conv2d(in_channels=in_channels, out_channels=out_channels,
-                                 kernel_size=kernel_size, stride=stride, padding=padding)]
+                                 kernel_size=kernel_size, stride=stride, padding=padding, bias=True)]
             layers += [nn.BatchNorm2d(num_features=out_channels)]
             layers += [nn.ReLU()]
 
@@ -16,7 +16,7 @@ class SegNetBasic(nn.Module):
         def CB(in_channels, out_channels, kernel_size=3, stride=1, padding=1):
             layers = []
             layers += [nn.Conv2d(in_channels=in_channels, out_channels=out_channels,
-                                 kernel_size=kernel_size, stride=stride, padding=padding)]
+                                 kernel_size=kernel_size, stride=stride, padding=padding, bias=False)]
             layers += [nn.BatchNorm2d(num_features=out_channels)]
 
             cb = nn.Sequential(*layers)
@@ -53,7 +53,7 @@ class SegNetBasic(nn.Module):
         # Deconv1
         self.unpool1 = nn.MaxUnpool2d(2, stride=2)
         self.dcb1_1 = CB(64, 64, 7, 1, 3)
-        self.score_fr = nn.Conv2d(64, num_classes, kernel_size = 1)
+        self.score_fr = nn.Conv2d(64, num_classes, kernel_size = 1, bias=False)
         
     def _initialize_weights(self):
         for m in self.modules():
