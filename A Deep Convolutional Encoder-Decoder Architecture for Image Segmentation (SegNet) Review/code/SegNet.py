@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 
 class SegNet(nn.Module):
-    def __init__(self, num_classes=5):
+    def __init__(self, num_classes=12):
         super(SegNet, self).__init__()
         def CBR(in_channels, out_channels, kernel_size=3, stride=1, padding=1):
             layers = []
@@ -84,47 +84,52 @@ class SegNet(nn.Module):
     def forward(self, x):
         h = self.cbr1_1(x)
         h = self.cbr1_2(h)
+        dim1 = h.size()
         h, pool1_indices = self.pool1(h)
         
         h = self.cbr2_1(h)
         h = self.cbr2_2(h)
+        dim2 = h.size()
         h, pool2_indices = self.pool2(h)
         
         h = self.cbr3_1(h)
         h = self.cbr3_2(h)
         h = self.cbr3_3(h)
+        dim3 = h.size()
         h, pool3_indices = self.pool3(h)
         
         h = self.cbr4_1(h)
         h = self.cbr4_2(h)
         h = self.cbr4_3(h)
+        dim4 = h.size()
         h, pool4_indices = self.pool4(h)
         
         h = self.cbr5_1(h)
         h = self.cbr5_2(h)
         h = self.cbr5_3(h)
+        dim5 = h.size()
         h, pool5_indices = self.pool5(h)
         
-        h = self.unpool5(h, pool5_indices)
+        h = self.unpool5(h, pool5_indices, output_size = dim5)
         h = self.dcbr5_3(h)
         h = self.dcbr5_2(h)
         h = self.dcbr5_1(h)
         
-        h = self.unpool4(h, pool4_indices)
+        h = self.unpool4(h, pool4_indices, output_size = dim4)
         h = self.dcbr4_3(h)
         h = self.dcbr4_2(h)
         h = self.dcbr4_1(h)
         
-        h = self.unpool3(h, pool3_indices)
+        h = self.unpool3(h, pool3_indices, output_size = dim3)
         h = self.dcbr3_3(h)
         h = self.dcbr3_2(h)
         h = self.dcbr3_1(h)
         
-        h = self.unpool2(h, pool2_indices)
+        h = self.unpool2(h, pool2_indices, output_size = dim2)
         h = self.dcbr2_2(h)
         h = self.dcbr2_1(h)
         
-        h = self.unpool1(h, pool1_indices)
+        h = self.unpool1(h, pool1_indices, output_size = dim1)
         h = self.dcbr1_2(h)
         h = self.dcbr1_1(h)
         h = self.score_fr(h)        
