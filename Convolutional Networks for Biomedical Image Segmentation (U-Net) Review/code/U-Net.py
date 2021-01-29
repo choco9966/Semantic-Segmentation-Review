@@ -105,11 +105,3 @@ class UNet(nn.Module):
 
                 if m.bias is not None:
                     torch.nn.init.zeros_(m.bias)
-
-'''
-model = UNet(num_classes=2).cuda()
-x = torch.randn([1, 1, 572 , 572]).cuda()
-print("input shape : ", x.shape) # torch.Size([1, 1, 572, 572])
-out = model(x)
-print("output shape : ", out.size()) # torch.Size([1, 2, 388, 388])
-'''
