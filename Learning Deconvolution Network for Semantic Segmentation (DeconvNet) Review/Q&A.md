@@ -46,8 +46,6 @@ layers {  bottom: "fc7"  top: "fc7"  name: "relu7"  type: RELU}
 
 
 
-
-
 ![](https://drive.google.com/uc?export=view&id=1nxpPorNlv85wSNBbdSS4w9Icdh9ozSKC)
 
 논문에서 자세히는 아니지만 [Edge Box](https://pdollar.github.io/files/papers/ZitnickDollarECCV14edgeBoxes.pdf)이라는 논문의 방식을 사용했다라고 합니다. 해당 논문에서는 슬라이딩 윈도우 방식과는 다르게 Edge를 이용해서 바운딩 박스 후보를 생성하고 해당 영역 내에서만 추가 분류 작업을 진행하는 방식입니다. 이러한 후보의 생성의 방식은 아래와 같습니다. 
@@ -57,9 +55,6 @@ layers {  bottom: "fc7"  top: "fc7"  name: "relu7"  type: RELU}
 ![image-20210123202258631](C:\Users\지뇽쿤\AppData\Roaming\Typora\typora-user-images\image-20210123202258631.png)
 
 
-
-1. 에지 픽셀에 대한 에지 반응을 계산 
-2. 
 
 ![img](http://amroamroamro.github.io/mexopencv/opencv_contrib/structured_edge_detection_demo_01.png)
 
