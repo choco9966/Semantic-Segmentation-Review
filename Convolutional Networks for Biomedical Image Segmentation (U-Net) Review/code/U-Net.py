@@ -53,7 +53,6 @@ class UNet(nn.Module):
         self.dec1_2 = CBR2d(in_channels=128, out_channels=64, kernel_size=3, stride=1, padding=0, bias=True) 
         self.dec1_1 = CBR2d(in_channels=64, out_channels=64, kernel_size=3, stride=1, padding=0, bias=True) 
         self.score_fr = nn.Conv2d(in_channels=64, out_channels=2, kernel_size=1, stride=1, padding=0, bias=True) # Output Segmentation map 
-        self._initialize_weights()
 
     def forward(self, x):
         enc1_1 = self.enc1_1(x)
@@ -97,19 +96,3 @@ class UNet(nn.Module):
 
         x = self.score_fr(dec1_1) 
         return torch.sigmoid(x)
-
-    def _initialize_weights(self):
-        for m in self.modules():
-            if isinstance(m, nn.Conv2d):
-                torch.nn.init.xavier_uniform_(m.weight)
-
-                if m.bias is not None:
-                    torch.nn.init.zeros_(m.bias)
-
-'''
-model = UNet(num_classes=2).cuda()
-x = torch.randn([1, 1, 572 , 572]).cuda()
-print("input shape : ", x.shape) # torch.Size([1, 1, 572, 572])
-out = model(x)
-print("output shape : ", out.size()) # torch.Size([1, 2, 388, 388])
-'''

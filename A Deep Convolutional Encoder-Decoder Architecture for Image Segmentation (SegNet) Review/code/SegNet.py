@@ -70,16 +70,6 @@ class SegNet(nn.Module):
         self.dcbr1_2 = CBR(64, 64, 3, 1, 1)
         self.dcbr1_1 = CBR(64, 64, 3, 1, 1)
         self.score_fr = nn.Conv2d(64, num_classes, kernel_size = 1)
-        
-    def _initialize_weights(self):
-        for m in self.modules():
-            if isinstance(m, nn.Conv2d):
-                torch.nn.init.xavier_uniform_(m.weight)
-
-                # xavier_uniform은 bias에 대해서는 제공하지 않음 
-                # ValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions
-                if m.bias is not None:
-                    torch.nn.init.zeros_(m.bias)
 
     def forward(self, x):
         h = self.cbr1_1(x)
