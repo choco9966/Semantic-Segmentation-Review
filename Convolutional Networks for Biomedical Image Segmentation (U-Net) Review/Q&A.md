@@ -20,3 +20,7 @@
 
 
 
+Q1. We generate smooth deformations using random displacement vectors on a coarse 3 by 3 grid . The displacements are sampled from a Gaussian distribution with 10 pixels standard deviation?
+
+Q2. The final decoder output is fed to a multi-class soft-max classifier to produce class probabilities for each pixel independently
+
