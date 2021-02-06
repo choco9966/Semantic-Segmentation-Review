@@ -95,4 +95,4 @@ class UNet(nn.Module):
         dec1_1 = self.dec1_1(dec1_2)
 
         x = self.score_fr(dec1_1) 
-        return torch.sigmoid(x)
+        return x
