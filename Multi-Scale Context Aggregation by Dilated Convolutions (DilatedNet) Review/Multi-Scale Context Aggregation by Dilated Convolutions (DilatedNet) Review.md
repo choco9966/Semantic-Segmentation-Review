@@ -101,7 +101,7 @@
 - 마지막 두개의 layer에 존재하는 pooing 및 striding 제거합니다. 
 - 마지막 layer를 제외한 모든 layer의 convolution 연산은 2-dilated 적용합니다. 
 - 마지막 layer의 convolution 은 4-dialted 적용합니다. 
-- convolution을 바꾸면서 기존 학습된 weight를 모두 초기화시켜야 했지만, 고해상도의 output을 얻을 수 있다.
+- convolution을 바꾸면서 기존 학습된 weight를 모두 초기화시켜야 했지만, 고해상도의 output을 얻을 수 있습니다.
 - https://blog.kakaocdn.net/dn/XGBYY/btqV19gdFgI/wxWK9K9pERO4qeaMvTxt11/img.png
 
 <figure> 
