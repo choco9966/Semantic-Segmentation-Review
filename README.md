@@ -2,7 +2,7 @@
 
 ## Contributors 
 
-풀잎스쿨 15기 Semantic Segmentation 논문으로 입문하기 멤버분들 
+풀잎스쿨 15기 Semantic Segmentation 논문으로 입문하기 멤버
 
 - 김덕주, 김소연, [김현우](https://github.com/choco9966), 류영표, 박근범, 백장현, 심주용, 이명오, 이영석, 이은경, [이해중](https://github.com/DeepHaeJoong)
 
@@ -11,7 +11,9 @@
 - Fully Convolutional Networks for semantic Segmentation [[paper](https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Long_Fully_Convolutional_Networks_2015_CVPR_paper.pdf) / [reivew](https://github.com/choco9966/Semantic-Segmentation-Review/tree/main/001.%20Fully%20Convolutional%20Network)]
 - Learning Deconvolution Network for Semantic Segmentation [[paper](https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Noh_Learning_Deconvolution_Network_ICCV_2015_paper.pdf) / [review](https://github.com/choco9966/Semantic-Segmentation-Review/tree/main/Learning%20Deconvolution%20Network%20for%20Semantic%20Segmentation%20(DeconvNet)%20Review)]
 - SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation [[paper](https://arxiv.org/pdf/1511.00561.pdf) / [review](https://github.com/choco9966/Semantic-Segmentation-Review/tree/main/A%20Deep%20Convolutional%20Encoder-Decoder%20Architecture%20for%20Image%20Segmentation%20(SegNet)%20Review)]
-- RedNet: Residual Encoder-Decoder Network for indoor RGB-D Semantic Segmentation [[paper](https://arxiv.org/abs/1806.01054) / review]
+- RedNet: Image Restoration Using Very Deep Convolutional Encoder-Decoder Networks with Symmetric Skip Connections [[paper](https://arxiv.org/abs/1603.09056) / review]
+- LinkNet: Exploiting Encoder Representations for Efficient Semantic Segmentation [[paper](https://arxiv.org/abs/1707.03718) / review] 
+- SDN : Stacked Deconvolutional Network for Semantic Segmentation [[paper](https://arxiv.org/abs/1708.04943) / review]
 
 ## U-Net 형식의 Semantic Segmentation 
 
@@ -37,3 +39,7 @@
 - Deformable Convolutional Networks [[paper](https://arxiv.org/abs/1703.06211) / review]
 - Large Kernel Matters - Improve Semantic Segmentation by Global Convolutional Network [[paper](https://arxiv.org/abs/1703.02719) / review]
 
+
+## High Resolution을 복원하려는 논문 
+
+- HRNet : Deep High-Resolution Representation Learning for Visual Recognition [[paper](https://arxiv.org/abs/1908.07919) / review]
