@@ -1,4 +1,11 @@
-# Semantic Segmentation Review
+# Semantic Segmentation Korean Review
+
+## Contributors 
+
+풀잎스쿨 15기 Semantic Segmentation 논문으로 입문하기 멤버분들 
+
+- 김덕주, 김소연, [김현우](https://github.com/choco9966), 류영표, 박근범, 백장현, 심주용, 이명오, 이영석, 이은경, [이해중](https://github.com/DeepHaeJoong)
+
 ## Encoder-Decoder 형식의 Semantic Segmentation 
 
 - Fully Convolutional Networks for semantic Segmentation [[paper](https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Long_Fully_Convolutional_Networks_2015_CVPR_paper.pdf) / [reivew](https://github.com/choco9966/Semantic-Segmentation-Review/tree/main/001.%20Fully%20Convolutional%20Network)]
