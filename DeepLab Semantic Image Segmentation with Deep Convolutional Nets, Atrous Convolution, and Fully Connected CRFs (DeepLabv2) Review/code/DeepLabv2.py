@@ -4,9 +4,7 @@ from torch.nn import functional as F
 """
 last few max pooling layers를 없애고, 대신에 이후 convolution layers에 atrous convolution을 함. 
 VGG16 or ResNet101 in fully convolutional fashion + using Atrous conv for downsampling
-
 bilinear interpolation to original resolution
-
 vgg16 based ASPP-L (4 branches : 6, 12, 18, 24)
 """
 
@@ -21,14 +19,14 @@ class VGG16(nn.Module):
         super(VGG16, self).__init__()
         self.features = nn.Sequential(conv3x3_relu(3, 64),
                                       conv3x3_relu(64, 64),
-                                      nn.MaxPool2d(2, stride=2),
+                                      nn.MaxPool2d(3, stride=2, padding=1),
                                       conv3x3_relu(64, 128),
                                       conv3x3_relu(128, 128),
-                                      nn.MaxPool2d(2, stride=2),
+                                      nn.MaxPool2d(3, stride=2, padding=1),
                                       conv3x3_relu(128, 256),
                                       conv3x3_relu(256, 256),
                                       conv3x3_relu(256, 256),
-                                      nn.MaxPool2d(2, stride=2),
+                                      nn.MaxPool2d(3, stride=2, padding=1),
                                       conv3x3_relu(256, 512),
                                       conv3x3_relu(512, 512),
                                       conv3x3_relu(512, 512),
