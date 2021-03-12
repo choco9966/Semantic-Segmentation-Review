@@ -60,23 +60,23 @@ class ASPP(nn.Module):
     def forward(self, feature_map):
         # 1번 branch
         # shape: (batch_size, out_channels, height/output_stride, width/output_stride)
-        out_3x3_r6 = F.relu(self.drop_conv_3x3(self.conv_3x3_r6(feature_map)))
-        out_img_r6 = F.relu(self.drop_conv_1x1(self.conv_1x1(out_3x3_r6)))
+        out_3x3_r6 = self.drop_conv_3x3(F.relu(self.conv_3x3_r6(feature_map)))
+        out_img_r6 = self.drop_conv_1x1(F.relu(self.conv_1x1(out_3x3_r6)))
         out_img_r6 = self.conv_1x1_out(out_img_r6)
         # 2번 branch
         # shape: (batch_size, out_channels, height/output_stride, width/output_stride)
-        out_3x3_r12 = F.relu(self.drop_conv_3x3(self.conv_3x3_r12(feature_map)))
-        out_img_r12 = F.relu(self.drop_conv_1x1(self.conv_1x1(out_3x3_r12)))
+        out_3x3_r12 = self.drop_conv_3x3(F.relu(self.conv_3x3_r12(feature_map)))
+        out_img_r12 = self.drop_conv_1x1(F.relu(self.conv_1x1(out_3x3_r12)))
         out_img_r12 = self.conv_1x1_out(out_img_r12)
         # 3번 branch
         # shape: (batch_size, out_channels, height/output_stride, width/output_stride)
-        out_3x3_r18 = F.relu(self.drop_conv_3x3(self.conv_3x3_r18(feature_map)))
-        out_img_r18 = F.relu(self.drop_conv_1x1(self.conv_1x1(out_3x3_r18)))
+        out_3x3_r18 = self.drop_conv_3x3(F.relu(self.conv_3x3_r18(feature_map)))
+        out_img_r18 = self.drop_conv_1x1(F.relu(self.conv_1x1(out_3x3_r18)))
         out_img_r18 = self.conv_1x1_out(out_img_r18)
         # 4번 branch
         # shape: (batch_size, out_channels, height/output_stride, width/output_stride)
-        out_3x3_r24 = F.relu(self.drop_conv_3x3(self.conv_3x3_r24(feature_map)))
-        out_img_r24 = F.relu(self.drop_conv_1x1(self.conv_1x1(out_3x3_r24)))
+        out_3x3_r24 = self.drop_conv_3x3(F.relu(self.conv_3x3_r24(feature_map)))
+        out_img_r24 = self.drop_conv_1x1(F.relu(self.conv_1x1(out_3x3_r24)))
         out_img_r24 = self.conv_1x1_out(out_img_r24)
 
         out = sum([out_img_r6, out_img_r12, out_img_r18, out_img_r24])
