@@ -50,35 +50,34 @@ class ASPP(nn.Module):
         self.conv_3x3_r18 = nn.Conv2d(in_channels, out_channels, kernel_size=3, stride=1, padding=18, dilation=18)
         # atrous 3x3, rate=24
         self.conv_3x3_r24 = nn.Conv2d(in_channels, out_channels, kernel_size=3, stride=1, padding=24, dilation=24)
-        self.bn_conv_3x3 = nn.BatchNorm2d(out_channels)
+        self.drop_conv_3x3 = nn.Dropout2d(0.5)
 
         self.conv_1x1 = nn.Conv2d(out_channels, out_channels, kernel_size=1)
-        self.bn_conv_1x1 = nn.BatchNorm2d(out_channels)
+        self.drop_conv_1x1 = nn.Dropout2d(0.5)
 
         self.conv_1x1_out = nn.Conv2d(out_channels, num_classes, kernel_size=1)
-        self.bn_conv_1x1_out = nn.BatchNorm2d(num_classes)
 
     def forward(self, feature_map):
         # 1번 branch
         # shape: (batch_size, out_channels, height/output_stride, width/output_stride)
-        out_3x3_r6 = F.relu(self.bn_conv_3x3(self.conv_3x3_r6(feature_map)))
-        out_img_r6 = F.relu(self.bn_conv_1x1(self.conv_1x1(out_3x3_r6)))
-        out_img_r6 = F.relu(self.bn_conv_1x1_out(self.conv_1x1_out(out_img_r6)))
+        out_3x3_r6 = F.relu(self.drop_conv_3x3(self.conv_3x3_r6(feature_map)))
+        out_img_r6 = F.relu(self.drop_conv_1x1(self.conv_1x1(out_3x3_r6)))
+        out_img_r6 = self.conv_1x1_out(out_img_r6)
         # 2번 branch
         # shape: (batch_size, out_channels, height/output_stride, width/output_stride)
-        out_3x3_r12 = F.relu(self.bn_conv_3x3(self.conv_3x3_r12(feature_map)))
-        out_img_r12 = F.relu(self.bn_conv_1x1(self.conv_1x1(out_3x3_r12)))
-        out_img_r12 = F.relu(self.bn_conv_1x1_out(self.conv_1x1_out(out_img_r12)))
+        out_3x3_r12 = F.relu(self.drop_conv_3x3(self.conv_3x3_r12(feature_map)))
+        out_img_r12 = F.relu(self.drop_conv_1x1(self.conv_1x1(out_3x3_r12)))
+        out_img_r12 = self.conv_1x1_out(out_img_r12)
         # 3번 branch
         # shape: (batch_size, out_channels, height/output_stride, width/output_stride)
-        out_3x3_r18 = F.relu(self.bn_conv_3x3(self.conv_3x3_r18(feature_map)))
-        out_img_r18 = F.relu(self.bn_conv_1x1(self.conv_1x1(out_3x3_r18)))
-        out_img_r18 = F.relu(self.bn_conv_1x1_out(self.conv_1x1_out(out_img_r18)))
+        out_3x3_r18 = F.relu(self.drop_conv_3x3(self.conv_3x3_r18(feature_map)))
+        out_img_r18 = F.relu(self.drop_conv_1x1(self.conv_1x1(out_3x3_r18)))
+        out_img_r18 = self.conv_1x1_out(out_img_r18)
         # 4번 branch
         # shape: (batch_size, out_channels, height/output_stride, width/output_stride)
-        out_3x3_r24 = F.relu(self.bn_conv_3x3(self.conv_3x3_r24(feature_map)))
-        out_img_r24 = F.relu(self.bn_conv_1x1(self.conv_1x1(out_3x3_r24)))
-        out_img_r24 = F.relu(self.bn_conv_1x1_out(self.conv_1x1_out(out_img_r24)))
+        out_3x3_r24 = F.relu(self.drop_conv_3x3(self.conv_3x3_r24(feature_map)))
+        out_img_r24 = F.relu(self.drop_conv_1x1(self.conv_1x1(out_3x3_r24)))
+        out_img_r24 = self.conv_1x1_out(out_img_r24)
 
         out = sum([out_img_r6, out_img_r12, out_img_r18, out_img_r24])
         
