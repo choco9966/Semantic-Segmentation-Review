@@ -24,6 +24,7 @@
 - Attention U-Net: Learning Where to Look for the Pancreas [[paper](https://arxiv.org/abs/1804.03999) / review]
 - The One Hundred Layers Tiramisu: Fully Convolutional DenseNets for Semantic Segmentation [[paper](https://arxiv.org/abs/1611.09326) / review]
 - Eff-UNet: A Novel Architecture for Semantic Segmentation in Unstructured Environment [[paper](https://openaccess.thecvf.com/content_CVPRW_2020/papers/w22/Baheti_Eff-UNet_A_Novel_Architecture_for_Semantic_Segmentation_in_Unstructured_Environment_CVPRW_2020_paper.pdf) / review]
+- Double-UNet: DoubleU-Net: A Deep Convolutional Neural Network for Medical Image Segmentation [[paper](https://arxiv.org/abs/2006.04868) / review]
 
 ## DeepLab 형식의 이용한 Semantic Segmentation
 
@@ -39,7 +40,18 @@
 - Deformable Convolutional Networks [[paper](https://arxiv.org/abs/1703.06211) / review]
 - Large Kernel Matters - Improve Semantic Segmentation by Global Convolutional Network [[paper](https://arxiv.org/abs/1703.02719) / review]
 
-
-## High Resolution을 복원하려는 논문 
+## High Resolution을 복원하려는 논문
 
 - HRNet : Deep High-Resolution Representation Learning for Visual Recognition [[paper](https://arxiv.org/abs/1908.07919) / review]
+
+## Competition paper
+
+[ECCV 2020 Workshop]
+
+- Summary [[pdf](https://github.com/choco9966/Semantic-Segmentation-Review/blob/main/Competition%20Paper/ECCV%202020%20Workshop/ECCV%202020%20Workshop.pdf)]
+- 1st : Multi-level tail pixel cutmix and scale attention for long-tailed scene parsing [[paper](https://openreview.net/forum?id=GHaQlkoNM-p)]
+- 2nd : Diversification is All You Need: Towards Data Efficient Image Understanding [[paper](https://openreview.net/forum?id=UPbbSsBzfEW)]
+- 3rd : Edge-Preserving Guided Semantic Segmentation for VIPriors Challenge [[paper](https://vipriors.github.io/assets/downloads/Edge_Preserving_Guided_Semantic_Segmentation.pdf)]
+- 4th : EfficientSeg: An Efficient Semantic Segmentation Network [[paper](https://openreview.net/forum?id=s-OSwnzXvEi)]
+- 5th : Data-efficient semantic segmentation via extremely perturbed data augmentation [[paper](https://vipriors.github.io/assets/downloads/Data-efficient_semantic_segmentation_via_extremely_perturbed_data_augmentation.pdf)]
+- other : Hoya's segmentation_tutorial_pytorch [[paper](https://hoya012.github.io/blog/segmentation_tutorial_pytorch/) / [code](https://github.com/hoya012/semantic-segmentation-tutorial-pytorch)]
