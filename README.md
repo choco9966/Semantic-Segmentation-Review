@@ -47,7 +47,6 @@
 ## Competition paper
 
 [ECCV 2020 Workshop]
-
 - Summary [[pdf](https://github.com/choco9966/Semantic-Segmentation-Review/blob/main/Competition%20Paper/ECCV%202020%20Workshop/ECCV%202020%20Workshop.pdf)]
 - 1st : Multi-level tail pixel cutmix and scale attention for long-tailed scene parsing [[paper](https://openreview.net/forum?id=GHaQlkoNM-p)]
 - 2nd : Diversification is All You Need: Towards Data Efficient Image Understanding [[paper](https://openreview.net/forum?id=UPbbSsBzfEW)]
@@ -58,3 +57,6 @@
 
 [SIIM-ACR Pneumothorax Segmentation]
 - Summary [[pdf](https://github.com/choco9966/Semantic-Segmentation-Review/tree/main/Competition%20Paper/SIIM-ACR%20Pneumothorax%20Segmentation)]
+
+[Kaggle Summary Poster] 
+- https://neptune.ai/blog/image-segmentation-tips-and-tricks-from-kaggle-competitions
