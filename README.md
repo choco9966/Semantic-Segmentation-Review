@@ -55,3 +55,6 @@
 - 4th : EfficientSeg: An Efficient Semantic Segmentation Network [[paper](https://openreview.net/forum?id=s-OSwnzXvEi)]
 - 5th : Data-efficient semantic segmentation via extremely perturbed data augmentation [[paper](https://vipriors.github.io/assets/downloads/Data-efficient_semantic_segmentation_via_extremely_perturbed_data_augmentation.pdf)]
 - other : Hoya's segmentation_tutorial_pytorch [[paper](https://hoya012.github.io/blog/segmentation_tutorial_pytorch/) / [code](https://github.com/hoya012/semantic-segmentation-tutorial-pytorch)]
+
+[SIIM-ACR Pneumothorax Segmentation]
+- Summary [[pdf](https://github.com/choco9966/Semantic-Segmentation-Review/tree/main/Competition%20Paper/SIIM-ACR%20Pneumothorax%20Segmentation)]
