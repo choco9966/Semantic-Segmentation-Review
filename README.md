@@ -58,5 +58,8 @@
 [SIIM-ACR Pneumothorax Segmentation]
 - Summary [[pdf](https://github.com/choco9966/Semantic-Segmentation-Review/tree/main/Competition%20Paper/SIIM-ACR%20Pneumothorax%20Segmentation)]
 
+[Severstal Steel Defect Detection]
+- Summary [[pdf](https://github.com/choco9966/Semantic-Segmentation-Review/tree/main/Competition%20Paper/Severstal%20Steel%20Defect%20Detection)]
+
 [Kaggle Summary Poster] 
 - https://neptune.ai/blog/image-segmentation-tips-and-tricks-from-kaggle-competitions
