@@ -45,7 +45,8 @@ class classifier(nn.Module):
         super(classifier, self).__init__()
         self.classifier = nn.Sequential(conv_relu(512, 1024, 3, rate=12), 
                                        nn.Dropout2d(0.5), 
-                                       conv_relu(1024, 1024, 1, rate=0), 
+                                       nn.Conv2d(1024, 1024, 1), 
+                                       nn.ReLU(), 
                                        nn.Dropout2d(0.5), 
                                        nn.Conv2d(1024, num_classes, kernel_size=1)
                                        )
