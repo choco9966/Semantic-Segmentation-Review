@@ -14,24 +14,21 @@ class VGG16(nn.Module):
         super(VGG16, self).__init__()
         self.features1 = nn.Sequential(conv_relu(3, 64, 3, 1),
                                       conv_relu(64, 64, 3, 1),
-                                      nn.MaxPool2d(3, stride=2, padding=1))
+                                      nn.MaxPool2d(2, stride=2, padding=0))
         self.features2 = nn.Sequential(conv_relu(64, 128, 3, 1),
                                       conv_relu(128, 128, 3, 1),
-                                      nn.MaxPool2d(3, stride=2, padding=1))
+                                      nn.MaxPool2d(2, stride=2, padding=0))
         self.features3 = nn.Sequential(conv_relu(128, 256, 3, 1),
                                       conv_relu(256, 256, 3, 1),
                                       conv_relu(256, 256, 3, 1),
-                                      nn.MaxPool2d(3, stride=2, padding=1))
+                                      nn.MaxPool2d(2, stride=2, padding=0))
         self.features4 = nn.Sequential(conv_relu(256, 512, 3, 1),
                                       conv_relu(512, 512, 3, 1),
                                       conv_relu(512, 512, 3, 1),
-                                      nn.MaxPool2d(3, stride=1, padding=1))
-                                      # and replace subsequent conv layer r=2
         self.features5 = nn.Sequential(conv_relu(512, 512, 3, rate=2),
                                       conv_relu(512, 512, 3, rate=2),
-                                      conv_relu(512, 512, 3, rate=2),
-                                      nn.MaxPool2d(3, stride=1, padding=1), 
-                                      nn.AvgPool2d(3, stride=1, padding=1)) # 마지막 stride=1로 해서 두 layer 크기 유지 
+                                      conv_relu(512, 512, 3, rate=2))
+                                       
     def forward(self, x):
         out = self.features1(x)
         out = self.features2(out)
@@ -43,7 +40,8 @@ class VGG16(nn.Module):
 class classifier(nn.Module):
     def __init__(self, num_classes): 
         super(classifier, self).__init__()
-        self.classifier = nn.Sequential(conv_relu(512, 1024, 3, rate=12), 
+        self.classifier = nn.Sequential(nn.Conv2d(512,4096,kernel_size=7,dilation=4,padding=12), 
+                                       nn.ReLU(),
                                        nn.Dropout2d(0.5), 
                                        nn.Conv2d(1024, 1024, 1), 
                                        nn.ReLU(), 
