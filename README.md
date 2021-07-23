@@ -2,11 +2,15 @@
 
 ## Contributors 
 
-풀잎스쿨 15기 Semantic Segmentation 논문으로 입문하기 멤버
+풀잎스쿨 14기 Semantic Segmentation 논문으로 입문하기 멤버
 
-- 김덕주, 김소연, [김현우](https://github.com/choco9966), 류영표, 박근범, 백장현, 심주용, 이명오, 이영석, 이은경, [이해중](https://github.com/DeepHaeJoong)
+- 김덕주, 김소연, [김현우](https://github.com/choco9966), 류영표, 박근범, 백장현, 심주용, 이명오, 이영석, 이은경, [이해중](https://github.com/DeepHaeJoong), 조현정
 
-## Encoder-Decoder 형식의 Semantic Segmentation 
+풀잎스쿨 16기 Semantic Segmentation 논문으로 입문하기 2기 멤버
+
+- 고재영, 김덕주, 김소연, [김현우](https://github.com/choco9966), 심주용, 이영석, 이은경, 이한얼, [이해중](https://github.com/DeepHaeJoong), 조현정, 한건우 
+
+## Encoder-Decoder 형식의 Semantic Segmentation
 
 - Fully Convolutional Networks for semantic Segmentation [[paper](https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Long_Fully_Convolutional_Networks_2015_CVPR_paper.pdf) / [reivew](https://github.com/choco9966/Semantic-Segmentation-Review/tree/main/001.%20Fully%20Convolutional%20Network)]
 - Learning Deconvolution Network for Semantic Segmentation [[paper](https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Noh_Learning_Deconvolution_Network_ICCV_2015_paper.pdf) / [review](https://github.com/choco9966/Semantic-Segmentation-Review/tree/main/Learning%20Deconvolution%20Network%20for%20Semantic%20Segmentation%20(DeconvNet)%20Review)]
@@ -43,6 +47,17 @@
 ## High Resolution을 복원하려는 논문
 
 - HRNet : Deep High-Resolution Representation Learning for Visual Recognition [[paper](https://arxiv.org/abs/1908.07919) / review]
+
+
+
+## Real-Time Semantic Segmentation
+
+- ENet : A Deep Neural Network Architecture for Real-Time Semantic Segmentation [[paper](https://arxiv.org/abs/1606.02147) / review]
+- ERFNet : Efficient Residual Factorized ConvNet for Real-time Semantic Segmentation [[paper](http://www.robesafe.es/personal/eduardo.romera/pdfs/Romera17tits.pdf) / review]
+- ICNet : ICNet for Real-Time Semantic Segmentation on High-Resolution Images [[paper](https://arxiv.org/pdf/1704.08545.pdf) / review]
+- BiseNetv1 : Bilateral Segmentation Network for Real-time Semantic Segmentation [[paper](https://arxiv.org/abs/1808.00897) / review]
+- BiseNetv2 : Bilateral Network with Guided Aggregation for Real-time Semantic Segmentation [[paper](https://arxiv.org/pdf/2004.02147.pdf) / review]
+- ESPNet : Efficient Spatial Pyramid of Dilated Convolutions for Semantic Segmentation [[paper](https://arxiv.org/abs/1803.06815) / review]
 
 ## Competition paper
 
