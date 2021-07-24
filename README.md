@@ -4,11 +4,11 @@
 
 풀잎스쿨 14기 Semantic Segmentation 논문으로 입문하기 멤버
 
-- 김덕주, 김소연, [김현우](https://github.com/choco9966), 류영표, 박근범, 백장현, 심주용, 이명오, 이영석, 이은경, [이해중](https://github.com/DeepHaeJoong), 조현정
+- 김덕주, 김소연, [김현우](https://github.com/choco9966), 류영표, 박근범, 백장현, 심주용, 이명오, [이영석](https://github.com/younnggsuk), [이은경](https://github.com/stat-eklee), [이해중](https://github.com/DeepHaeJoong), 조현정
 
 풀잎스쿨 16기 Semantic Segmentation 논문으로 입문하기 2기 멤버
 
-- 고재영, 김덕주, 김소연, [김현우](https://github.com/choco9966), 심주용, 이영석, 이은경, 이한얼, [이해중](https://github.com/DeepHaeJoong), 조현정, 한건우 
+- 고재영, 김덕주, 김소연, [김현우](https://github.com/choco9966), 심주용, [이영석](https://github.com/younnggsuk), [이은경](https://github.com/stat-eklee), 이한얼, [이해중](https://github.com/DeepHaeJoong), 조현정, 한건우 
 
 ## Encoder-Decoder 형식의 Semantic Segmentation
 
